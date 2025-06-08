@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>อยากกินอะไร ถาม AI ดู</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: 'rgb(var(--color-primary) / <alpha-value>)',
+            secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
+            accent: 'rgb(var(--color-accent) / <alpha-value>)',
+            neutral: 'rgb(var(--color-neutral) / <alpha-value>)',
+            bground: 'rgb(var(--color-bground) / <alpha-value>)',
+            surface: 'rgb(var(--color-surface) / <alpha-value>)',
+            textlight: 'rgb(var(--color-textlight) / <alpha-value>)',
+            textdark: 'rgb(var(--color-textdark) / <alpha-value>)',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'Sarabun', 'Inter', 'sans-serif'],
+            logo: ['Pacifico', 'cursive'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Pacifico&family=Poppins:wght@300;400;500;600;700;800&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: 37 99 235; /* blue-600 */
+      --color-secondary: 16 185 129; /* emerald-500 */
+      --color-accent: 236 72 153; /* pink-500 */
+      --color-neutral: 75 85 99; /* gray-600 */
+      --color-bground: 249 250 251; /* gray-50 */
+      --color-surface: 255 255 255; /* white */
+      --color-textlight: 229 231 235; /* gray-200 */
+      --color-textdark: 17 24 39; /* gray-900 */
+    }
+    body {
+      font-family: 'Poppins', 'Sarabun', 'Inter', sans-serif;
+      background-color: theme('colors.bground');
+      color: theme('colors.textdark');
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .logo-font {
+      font-family: 'Pacifico', cursive;
+    }
+    .prose { /* Basic prose styling for articles */
+      color: theme('colors.textdark');
+    }
+    .prose h1, .prose h2, .prose h3, .prose h4 {
+      color: theme('colors.primary');
+    }
+    .prose a {
+      color: theme('colors.secondary');
+      text-decoration: none;
+    }
+    .prose a:hover {
+      text-decoration: underline;
+      color: rgb(var(--color-secondary) / 0.8);
+    }
+    .prose strong {
+      color: theme('colors.textdark');
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.4.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
